@@ -1,26 +1,84 @@
-html,
-body {
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif !important;
 }
 
+/* reset Links style */
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-* {
+/* Spinner Styling */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
   box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #5444ff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Spinner Styling */
+
+.reset-link-white {
+  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.reset-link-primary {
+  color: #1976d2;
+}
+
+/* customizing carousel */
+.carousel-root {
+  margin-top: 4rem;
+}
+.carousel-root .slide span {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+.carousel_carousel-img-container__2cR7t {
+  justify-content: flex-start !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid black !important;
+}
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid black !important;
+}
+
+nav svg path {
+  color: black !important;
 }

@@ -1,0 +1,28 @@
+.cart {
+  &-inc,
+  &-dec {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    &:not(:disabled):hover {
+      transform: translateY(-1px);
+      // box-shadow: 0 0 5px rgba(0, 0, 0, 0.098);
+    }
+    &:disabled {
+      cursor: no-drop;
+      opacity: 0.5;
+    }
+  }
+  &-inc {
+    background-color: rgb(32, 122, 32);
+  }
+
+  &-dec {
+    background-color: #c62828;
+  }
+}
